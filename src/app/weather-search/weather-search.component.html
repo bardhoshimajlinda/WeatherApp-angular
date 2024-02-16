@@ -10,7 +10,3 @@
   <p>Pressure: {{ weatherData.main.pressure }} hPa</p>
   <p>Cloudiness: {{ weatherData.weather[0].description }}</p>
 </div>
-
-<div *ngIf="errorMessage">
-  <app-error [errorMessage]="errorMessage"></app-error>
-</div>

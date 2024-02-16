@@ -10,7 +10,6 @@ import {WeatherService} from "../services/weather.service";
 export class WeatherSearchComponent {
   cityName: string = '';
   weatherData: any;
-  errorMessage: string | undefined;
 
   constructor(private weatherService: WeatherService) { }
 
@@ -25,8 +24,8 @@ export class WeatherSearchComponent {
         (data) => {
           this.weatherData = data;
         },
-        error => {
-          this.errorMessage = 'An error occurred while fetching data. Please try again later.';
+        (error) => {
+          console.error('Error fetching weather:', error);
         }
       );
   }

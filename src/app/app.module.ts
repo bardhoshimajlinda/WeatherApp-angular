@@ -2,18 +2,18 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WeatherComponent } from './weather/weather.component';
 import { WeatherSearchComponent } from './weather-search/weather-search.component';
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ErrorComponent } from './error/error.component';
+import { WeatherDisplayComponent } from './weather-display/weather-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    WeatherComponent,
     WeatherSearchComponent,
-    ErrorComponent
+    ErrorComponent,
+    WeatherDisplayComponent
   ],
     imports: [
         BrowserModule,
