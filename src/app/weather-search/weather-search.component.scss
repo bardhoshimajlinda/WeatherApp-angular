@@ -1,17 +1,17 @@
 
-div {
+.container {
   text-align: center;
 }
 
 input[type="text"] {
-  padding: 8px;
+  padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-right: 8px;
 }
 
 button {
-  padding: 8px 16px;
+  padding: 10px 20px;
   background-color: #ad5555;
   color: #fff;
   border: none;
@@ -22,3 +22,11 @@ button {
 button:hover {
   background-color: #d08585;
 }
+
+.date{
+  font-weight: bold;
+}
+p{
+  font-size: 20px;
+}
+

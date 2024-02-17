@@ -1,5 +1,19 @@
-div.container {
-  text-align: center;
-  color: #1e0e0e;
-  padding-top: 50px;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #e5dede;
+}
+
+.box {
+  background-color: #c9c1c1;
+  padding: 100px;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.box h1 {
+  color: #333;
+  font-size: 30px;
 }

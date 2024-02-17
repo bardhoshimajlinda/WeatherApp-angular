@@ -7,6 +7,7 @@ import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ErrorComponent } from './error/error.component';
 import { WeatherDisplayComponent } from './weather-display/weather-display.component';
+import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
@@ -15,12 +16,13 @@ import { WeatherDisplayComponent } from './weather-display/weather-display.compo
     ErrorComponent,
     WeatherDisplayComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        FormsModule,
-        HttpClientModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    NgOptimizedImage
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

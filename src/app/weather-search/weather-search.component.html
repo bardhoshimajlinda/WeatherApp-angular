@@ -1,12 +1,21 @@
-<div>
-  <input type="text" placeholder="Enter city name" [(ngModel)]="cityName">
-  <button (click)="search()">Search</button>
-</div>
 
-<div *ngIf="weatherData">
-  <h2>Weather for {{ weatherData.name }}</h2>
-  <p>Temperature: {{ Math.floor(weatherData.main.temp - 273.15) }}°C</p>
-  <p>Humidity: {{ weatherData.main.humidity }}%</p>
-  <p>Pressure: {{ weatherData.main.pressure }} hPa</p>
-  <p>Cloudiness: {{ weatherData.weather[0].description }}</p>
+<div class="container">
+  <div>
+    <input type="text" placeholder="Enter city name" [(ngModel)]="cityName">
+    <button (click)="search()">Search</button>
+  </div>
+
+  <div class="report">
+    <p class="date">{{ todayDate | date: "MM.dd.YYYY" }}</p>
+  </div>
+
+  <div *ngIf="weatherData" class="weather-info">
+    <h2>Weather for {{ weatherData.name }}</h2>
+    <p>Temperature: {{ Math.floor(weatherData.main.temp - 273.15) }} °C</p>
+    <p>Humidity: {{ weatherData.main.humidity }}%</p>
+    <p>Pressure: {{ weatherData.main.pressure }} hPa</p>
+    <p>Cloudiness: {{ weatherData.weather[0].description }}</p>
+    <img slot="end" [src]=icon />
+  </div>
+
 </div>

@@ -10,6 +10,8 @@ import {WeatherService} from "../services/weather.service";
 export class WeatherSearchComponent {
   cityName: string = '';
   weatherData: any;
+  todayDate = new Date();
+  icon: any;
 
   constructor(private weatherService: WeatherService) { }
 
@@ -23,6 +25,8 @@ export class WeatherSearchComponent {
       .subscribe(
         (data) => {
           this.weatherData = data;
+          console.log(data);
+          this.icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
         },
         (error) => {
           console.error('Error fetching weather:', error);
