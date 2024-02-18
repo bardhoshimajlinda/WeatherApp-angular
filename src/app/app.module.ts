@@ -6,15 +6,13 @@ import { WeatherSearchComponent } from './weather-search/weather-search.componen
 import {FormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import { ErrorComponent } from './error/error.component';
-import { WeatherDisplayComponent } from './weather-display/weather-display.component';
 import {NgOptimizedImage} from "@angular/common";
 
 @NgModule({
   declarations: [
     AppComponent,
     WeatherSearchComponent,
-    ErrorComponent,
-    WeatherDisplayComponent
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

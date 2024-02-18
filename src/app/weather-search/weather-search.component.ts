@@ -12,6 +12,7 @@ export class WeatherSearchComponent {
   weatherData: any;
   todayDate = new Date();
   icon: any;
+  errorMessage: string | undefined;
 
   constructor(private weatherService: WeatherService) { }
 
@@ -28,8 +29,8 @@ export class WeatherSearchComponent {
           console.log(data);
           this.icon = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
         },
-        (error) => {
-          console.error('Error fetching weather:', error);
+        error => {
+          this.errorMessage = `Sorry but city ${this.cityName} not found!`;
         }
       );
   }

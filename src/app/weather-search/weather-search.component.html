@@ -18,4 +18,8 @@
     <img slot="end" [src]=icon />
   </div>
 
+  <div *ngIf="errorMessage">
+    <app-error [errorMessage]="errorMessage"></app-error>
+  </div>
+
 </div>
